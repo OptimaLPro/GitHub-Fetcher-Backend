@@ -2,7 +2,6 @@ import axios from "axios";
 
 export const TopProgrammingLang = async (lang: string) => {
   try {
-    console.log("TopProgrammingLang:", lang);
     const response = await axios.get(
       "https://api.github.com/search/repositories",
       {
@@ -16,7 +15,6 @@ export const TopProgrammingLang = async (lang: string) => {
       }
     );
 
-    console.log(`Total count for ${lang}:`, response.data.total_count);
     return response.data.total_count;
   } catch (error: any) {
     console.error(`Failed to fetch data for ${lang}:`, error.message);
@@ -25,7 +23,6 @@ export const TopProgrammingLang = async (lang: string) => {
 };
 
 export const getStarsForLanguage = async (language: string) => {
-  console.log("getStarsForLanguage:", language);
   try {
     const response = await axios.get(
       "https://api.github.com/search/repositories",

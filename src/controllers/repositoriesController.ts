@@ -17,7 +17,6 @@ export const getRepositories = async (req: Request, res: Response) => {
     order = "desc",
   } = req.query;
   try {
-    console.log(page, per_page, stars, query, order);
     const data = await fetchRepositories(
       Number(page),
       Number(per_page),
@@ -34,7 +33,6 @@ export const getRepositories = async (req: Request, res: Response) => {
 
 export const getRepositoryByID = async (req: Request, res: Response) => {
   const { id } = req.params;
-  console.log(id);
   try {
     const response = await fetchRepositoryByID(Number(id));
     res.status(200).json(response);

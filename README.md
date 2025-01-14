@@ -36,8 +36,8 @@ This project consists of two parts: a frontend application and a backend applica
 1. Clone the backend repository:
 
    ```bash
-   git clone https://github.com/OptimaLPro/zest-backend.git
-   cd zest-backend
+   git clone https://github.com/OptimaLPro/GitHub-Fetcher-Backend-Zest.git
+   cd GitHub-Fetcher-Backend-Zest
    ```
 
 2. Install dependencies:
@@ -64,3 +64,7 @@ The backend application will run at `http://localhost:5000`.
 
 `http://localhost:5000`
 
+### Link to Frontend repository
+  ```
+  https://github.com/OptimaLPro/GitHub-Fetcher-Zest
+  ```

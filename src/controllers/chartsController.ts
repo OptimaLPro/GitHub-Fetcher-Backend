@@ -32,7 +32,6 @@ export const getTopLang = async (req: Request, res: Response) => {
       {} as { [key: string]: number }
     );
 
-    console.log("languageStats", languageStats);
     res.status(200).json(languageStats);
   } catch (error: any) {
     console.error("Error:", error.message);
@@ -67,12 +66,10 @@ export const getStarsDistribution = async (req: Request, res: Response) => {
 export const getTrendingRepos = async (req: Request, res: Response) => {
   try {
     const { per_page, lastDate } = req.query;
-    console.log(per_page, lastDate);
     const trendingRepos = await getTrendingRepositories(
       Number(per_page),
       String(lastDate)
     );
-    // console.log("trendingRepos", trendingRepos);
     res.status(200).json(trendingRepos);
   } catch (error: any) {
     console.error("Error fetching trending repositories:", error);
