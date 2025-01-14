@@ -3,6 +3,6 @@ import { getTopLang } from "../controllers/chartsController";
 
 const router = Router();
 
-router.get("/", getTopLang);
+router.get("/languages", getTopLang);
 
 export default router;
