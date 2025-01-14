@@ -1,7 +1,5 @@
 import axios from "axios";
 
-const MAX_STARS = 999999;
-
 export const fetchRepositories = async (
   page: number,
   perPage: number,
@@ -32,25 +30,15 @@ export const fetchRepositories = async (
   return { sortedData, totalCount: response.data.total_count };
 };
 
-export const fetchSearchedRepositories = async (
-  query = "",
-  stars = MAX_STARS,
-  page = 1,
-  perPage = 10
-) => {
+export const fetchRepositoryByID = async (id: number) => {
   const response = await axios.get(
-    "https://api.github.com/search/repositories",
+    `https://api.github.com/repositories/${id}`,
     {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
       },
-      params: {
-        q: `${query ? query : ""} stars:<=${stars}`,
-        order: "desc",
-        page: page,
-        per_page: perPage,
-      },
     }
   );
+
   return response.data;
 };

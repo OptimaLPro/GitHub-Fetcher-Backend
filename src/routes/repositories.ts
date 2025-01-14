@@ -1,8 +1,12 @@
 import { Router } from "express";
-import { getTopLang } from "../controllers/chartsController";
+import {
+  getRepositories,
+  getRepositoryByID,
+} from "../controllers/repositoriesController";
 
 const router = Router();
 
-router.get("/", getTopLang);
+router.get("/", getRepositories);
+router.get("/:id", getRepositoryByID);
 
 export default router;
