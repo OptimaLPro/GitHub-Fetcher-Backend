@@ -3,7 +3,7 @@ import {
   getStarsForLanguage,
   TopProgrammingLang,
   getTrendingRepositories,
-} from "../services/charsService";
+} from "../services/chartsService";
 
 const languages = [
   "JavaScript",
