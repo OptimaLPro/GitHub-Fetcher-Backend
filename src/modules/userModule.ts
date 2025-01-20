@@ -9,7 +9,6 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-// Create a model based on the schema
 const User = mongoose.model<Document & { id: number; favorites: Repository[] }>(
   "users",
   userSchema

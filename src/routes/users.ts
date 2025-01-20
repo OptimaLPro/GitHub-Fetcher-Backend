@@ -4,8 +4,11 @@ import {
   getFavorites,
   removeFavorite,
 } from "../controllers/usersController";
+import { ensureUserMiddleware } from "../middlewares/ensureUser";
 
 const router = Router();
+
+router.use(ensureUserMiddleware);
 
 router.get("/favorites", getFavorites);
 router.post("/favorites", addFavorite);
