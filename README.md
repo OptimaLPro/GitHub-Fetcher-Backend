@@ -27,6 +27,8 @@ This project consists of two parts: a frontend application and a backend applica
    ```
    GITHUB_TOKEN=your_github_token
    PORT=5000
+   MONGODB_URI=your_mongodb_uri
+   FRONTEND_URL=http://localhost:5174
    ```
 
 2. Replace `your_github_token` with your GitHub Classic Token.
