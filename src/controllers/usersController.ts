@@ -24,12 +24,22 @@ export const addFavorite = async (
 ) => {
   try {
     let user = await User.findOne({ userId: req.userID });
+
+    const repoWithTimestamp = {
+      ...req.body,
+      added_favorites: new Date()
+    };
+
     if (!user) {
-      user = await User.create({ userId: req.userID, favorites: [req.body] });
+      user = await User.create({
+        userId: req.userID,
+        favorites: [repoWithTimestamp],
+      });
     } else {
-      user.favorites.push(req.body);
+      user.favorites.push(repoWithTimestamp);
       await user.save();
     }
+
     res.status(200).send(user.favorites);
   } catch (error) {
     console.error("Error adding favorite:", error);

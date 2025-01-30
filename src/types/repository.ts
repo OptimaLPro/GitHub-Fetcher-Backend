@@ -105,5 +105,5 @@ export type Repository = {
       pull: boolean;
     };
     score: number;
-    added_localstorage: string;
+    added_favorites: string;
   };
