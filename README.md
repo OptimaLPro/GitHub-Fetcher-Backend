@@ -26,7 +26,7 @@ This project consists of two parts: a frontend application and a backend applica
 
    ```
    GITHUB_TOKEN=your_github_token
-   PORT=5000
+   PORT=5001
    MONGODB_URI=your_mongodb_uri
    FRONTEND_URL=http://localhost:5174
    ```
@@ -56,7 +56,7 @@ Start the development server:
 npm run dev
 ```
 
-The backend application will run at `http://localhost:5000`.
+The backend application will run at `http://localhost:5001`.
 
 ---
 
@@ -64,7 +64,7 @@ The backend application will run at `http://localhost:5000`.
 
 ### Base URL
 
-`http://localhost:5000`
+`http://localhost:5001`
 
 ### Link to Frontend repository
   ```

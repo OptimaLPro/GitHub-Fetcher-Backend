@@ -22,6 +22,6 @@ app.use("/api/repositories", repositoriesRouter);
 app.use("/api/charts", chartsRouter);
 app.use("/api/users", userRouter);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 dbConnection(app, PORT);
